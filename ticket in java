@@ -1,0 +1,46 @@
+import java.util.*;
+public class bill {
+public static void main(String [] args){
+  Scanner keyboard = new Scanner(System.in);
+
+String name;
+String address;
+int phone_number;
+int current_reading;
+int previous_reading;
+double consumption = 0;
+{System.out.println("Enter Customer Name:");
+name = keyboard.nextLine();
+}
+{System.out.println("Enter Address:");
+address = keyboard.nextLine();
+}
+{System.out.println("Enter Customer Telephone Number:");
+phone_number = keyboard.nextInt();
+}
+{System.out.println("Enter Current reading:");
+current_reading = keyboard.nextInt();
+}
+{System.out.println("Enter previous reading:");
+previous_reading = keyboard.nextInt();
+}
+  
+int unit = (current_reading - previous_reading);              
+
+
+if (unit >= 1 && unit <=100) 
+   consumption = unit * 2.50;  
+
+else if (unit >= 101 && unit <=200) 
+  consumption = unit * 1.25;
+
+else if (unit >= 201 && unit <=350) 
+ consumption = unit * 1.90;
+else if (unit >=350) 
+ consumption = unit * 2.50;
+
+ System.out.println("Customer Name:"+name);
+ System.out.println("Address:"+address);
+ System.out.println("Telephone Number"+phone_number);
+ System.out.println("current Bill Ksh:" +consumption);      
+}}
